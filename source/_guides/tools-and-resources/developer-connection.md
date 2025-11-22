@@ -23,8 +23,10 @@ order: 3
 
 In order to install apps from the local SDK using the `pebble` tool, the Pebble
 Android or iOS app must be set up to allow a connection from the computer to the
-watch. This enables viewing logs and installing apps directly from the
-development environment, speeding up development.
+watch. Two discrete actions are required: enabling developer mode for the
+mobile application, and for the watch you wish to develop on. This enables
+viewing logs and installing apps directly from the development environment,
+speeding up development.
 
 Follow the steps illustrated below to get started.
 
@@ -52,19 +54,28 @@ In the Pebble mobile app:
 
 ## iOS Instructions
 
-In the Pebble mobile app:
+These actions take place in the iOS mobile app.
 
-* Open the left-hand menu and tap the *Settings* item.
+### Enable Development on the mobile app
+
+* Open the 'Settings' item in the tab bar.
   
   ![](/images/guides/publishing-tools/enable-dev-ios-1.png =300x)
   
-* Enable the Developer Mode using the toggle.
+* Enable the 'Use LAN developer connection' setting using the toggle.
   
   ![](/images/guides/publishing-tools/enable-dev-ios-2.png =300x)
 
-* Return to the menu, then tap the *Developer* item. Enable the Developer
-  Connection using the toggle at the top-right.
+### Enable Developemnt on a particular watch
+
+* Open the 'Devices' item in the tab bar.
 
   ![](/images/guides/publishing-tools/enable-dev-ios-3.png =300x)
+
+* Select your Pebble device of choice.
+
+* Enable tbe 'Dev Connection' toggle.
+
+* Take down your mobile device's IP address from Settings > Wi-Fi > _IPv4 Address_ > IP Address
   
-* Make note of the 'Server IP' and use it with the `--phone` argument.
+* Make note of the 'Server IP' and use it with the `--phone <mobile_device_ip>` argument.
